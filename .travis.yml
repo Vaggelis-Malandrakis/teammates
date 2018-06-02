@@ -6,6 +6,7 @@ branches:
   only:
     - master
     - release
+    - 8505-incomplete-display-question-title
 
 notifications:
   email: false
