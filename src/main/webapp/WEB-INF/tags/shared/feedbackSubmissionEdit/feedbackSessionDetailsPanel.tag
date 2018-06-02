@@ -41,7 +41,7 @@
 
         <div class="form-group">
           <label class="col-sm-2 control-label">Instructions:</label>
-          <div class="col-sm-10">
+          <div class="col-sm-10 word-wrap-break">
             <%-- Note: When an element has class text-preserve-space, do not insert HTML spaces --%>
             <p class="form-control-static text-preserve-space">${feedbackSession.instructionsString}</p>
           </div>

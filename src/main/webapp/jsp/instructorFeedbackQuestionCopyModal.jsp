@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
-<table class="table-responsive table table-hover table-bordered margin-0" id="copyTableModal">
+<table class="table-responsive table table-hover table-bordered margin-0 fixed-table-layout word-wrap-break" id="copyTableModal">
   <thead class="fill-primary">
     <tr>
       <th style="width:30px;">&nbsp;</th>
@@ -22,12 +22,12 @@
     </tr>
   </thead>
   <c:forEach items="${data.copyQnForm.questionRows}" var="row">
-    <tr style="cursor:pointer;">
+    <tr style="cursor:pointer;word-wrap: break-word;">
       <td><input type="checkbox"></td>
       <td>${row.courseId}</td>
       <td>${row.fsName}</td>
       <td>${row.qnType}</td>
-      <td>${fn:escapeXml(row.qnText)}</td>
+      <td><div >${fn:escapeXml(row.qnText)}</div></td>
       <input type="hidden" value="${row.qnId}">
       <input type="hidden" class="courseid" value="${row.courseId}">
       <input type="hidden" class="fsname" value="${row.fsName}">
